@@ -13,7 +13,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 //screens
 import Notification from './src/Notification'
 
-
+const Tab = createBottomTabNavigator()
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark'
 
