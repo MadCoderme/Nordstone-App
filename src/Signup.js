@@ -20,13 +20,19 @@ export default function Signup({ navigation }) {
 
 
     function login() {
-        ToastAndroid.show('Creating Account...', ToastAndroid.SHORT)
-        auth().createUserWithEmailAndPassword(email, pass).then(e => {
-            console.log(e)
-        })
-        .catch(e => {
-            ToastAndroid.show(e.toString(), ToastAndroid.SHORT)
-        })
+        if(email.endsWith('gmail.com') || email.endsWith('yahoo.com') || email.endsWith('hotmail.com')
+         || email.endsWith('.co') || email.endsWith('.co.uk')) {
+            ToastAndroid.show('Creating Account...', ToastAndroid.SHORT)
+            auth().createUserWithEmailAndPassword(email, pass).then(e => {
+                console.log(e)
+            })
+            .catch(e => {
+                ToastAndroid.show(e.toString(), ToastAndroid.SHORT)
+            })
+        } else {
+            ToastAndroid.show('Please use an Email address from trusted services', ToastAndroid.SHORT)
+        }
+
     }
 
     return (

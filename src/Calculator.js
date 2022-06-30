@@ -71,7 +71,7 @@ export default function Calculator() {
             <TextInput placeholder="First number" onChangeText={val => setFNum(val)} style={styles.textInput} 
             keyboardType="numeric" placeholderTextColor="white" />
             <View style={styles.actionsHolder}>
-                {['add', 'minus', 'multiply', 'divide'].map((i, v) => (
+                {['add', 'minus', 'multiply'].map((i, v) => (
                     <TouchableOpacity style={[styles.box, {backgroundColor: 
                     currAction == i ? '#F3C98B': 'white'}]}
                        onPress={() => setCurrAction(i)} key={i}>
