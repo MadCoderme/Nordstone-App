@@ -12,6 +12,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 //screens
 import Notification from './src/Notification'
+import Calculator from './src/Calculator'
 
 const Tab = createBottomTabNavigator()
 const App = () => {
@@ -26,7 +27,7 @@ const App = () => {
       <Tab.Screen name="Notification" component={Notification} />
       <Tab.Screen name="Photo" component={SettingsScreen} />
       <Tab.Screen name="Text" component={HomeScreen} />
-      <Tab.Screen name="Calculator" component={SettingsScreen} />
+      <Tab.Screen name="Calculator" component={Calculator} />
     </Tab.Navigator>
   )
 }
