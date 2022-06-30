@@ -16,6 +16,7 @@ export default function Notification() {
 
     function send() {
       PushNotification.localNotification({
+        channelId: 'Nordstone',
         title: "Nordstone Alert!", 
         message: "Hello world, this is your super important notification, read or lose",
       });
